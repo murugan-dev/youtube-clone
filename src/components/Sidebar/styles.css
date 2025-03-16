@@ -1,0 +1,12 @@
+.category-btn{
+    border: none;
+    outline: none;
+    background-color: #000;
+    padding: 0.2rem 1rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 1.2rem;
+    overflow-y: auto;
+}

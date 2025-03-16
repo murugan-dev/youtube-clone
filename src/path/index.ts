@@ -3,3 +3,4 @@ export { default as ChannelDetails } from "../components/ChannelDetails/index.ts
 export { default as Feed } from "../components/Feed/index.tsx";
 export { default as SearchFeed } from "../components/SearchFeed/index.tsx";
 export { default as VideoDetails } from "../components/VideoDetails/index.tsx";
+export { default as Sidebar } from "../components/Sidebar/index.tsx";
