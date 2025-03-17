@@ -1,0 +1,20 @@
+{
+  "root": [
+    "./src/app.tsx",
+    "./src/declarations.d.ts",
+    "./src/main.tsx",
+    "./src/vite-env.d.ts",
+    "./src/components/channeldetails/index.tsx",
+    "./src/components/feed/index.tsx",
+    "./src/components/navbar/index.tsx",
+    "./src/components/searchbar/index.tsx",
+    "./src/components/searchfeed/index.tsx",
+    "./src/components/sidebar/index.tsx",
+    "./src/components/videodetails/index.tsx",
+    "./src/path/index.ts",
+    "./src/routes/approutes.tsx",
+    "./src/types/types.ts",
+    "./src/utils/contants.tsx"
+  ],
+  "version": "5.7.3"
+}

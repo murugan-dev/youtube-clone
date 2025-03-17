@@ -1,39 +1,21 @@
-import { 
-  MusicNote, 
+import {
   Home, 
-  Code, 
-  OndemandVideo, 
-  SportsEsports, 
-  LiveTv, 
-  School, 
-  FaceRetouchingNatural, 
-  Checkroom, 
-  GraphicEq, 
-  TheaterComedy, 
-  FitnessCenter, 
-  DeveloperMode 
+  Code,
 } from '@mui/icons-material';
 
-export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';
-
 export const categories = [
-  { name: 'New', icon: <Home />, },
-  { name: 'JS Mastery', icon: <Code/>, },
+  { name: 'Home', icon: <Home />, },
+  { name: 'Namaste JavaScript', icon: <Code/>, },
+  { name: 'Advanced JavaScript', icon: <Code/>, },
+  { name: 'freeCodeCamp.org', icon: <Code/>, },
+  { name: 'TypeScript', icon: <Code/>, },
   { name: 'Coding', icon: <Code />, },
-  { name: 'ReactJS', icon: <Code />, },
-  { name: 'NextJS', icon: <Code />, },
-  { name: 'Music', icon: <MusicNote /> },
-  { name: 'Education', icon: <School />, },
-  { name: 'Podcast', icon: <GraphicEq />, },
-  { name: 'Movie', icon: <OndemandVideo />, },
-  { name: 'Gaming', icon: <SportsEsports />, },
-  { name: 'Live', icon: <LiveTv />, },
-  { name: 'Sport', icon: <FitnessCenter />, },
-  { name: 'Fashion', icon: <Checkroom />, },
-  { name: 'Beauty', icon: <FaceRetouchingNatural />, },
-  { name: 'Comedy', icon: <TheaterComedy />, },
-  { name: 'Gym', icon: <FitnessCenter />, },
-  { name: 'Crypto', icon: <DeveloperMode />, },
+  { name: 'Learn Javascript', icon: <Code />, },         
+  { name: 'Learn React', icon: <Code />, },
+  { name: 'Learn NextJS', icon: <Code />, },
+  { name: 'HTML & CSS', icon: <Code />, },
+  { name: 'Tailwind', icon: <Code />, },
+
 ];
 
 export const demoThumbnailUrl = 'https://i.ibb.co/G2L2Gwp/API-Course.png';
