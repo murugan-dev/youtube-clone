@@ -21,6 +21,7 @@ const Navbar = () => {
         padding: "1rem 1rem",
         position: "sticky",
         top: 0,
+        borderBottom: "1px solid grey"
       }}
     >
       <Link to="/">

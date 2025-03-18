@@ -7,19 +7,19 @@ import { Box, Stack, Typography } from "@mui/material";
 // Custom components
 import { Sidebar } from "@/path/index.ts";
 
-// import { fetchFromAPI } from "../utils/fetchFromAPI";
-// import { Videos, Sidebar } from "./";
+import { fetchDataFromAPI } from "@/utils/fetchDataFromAPI.tsx";
+import { Videos, Sidebar } from "./";
 
 const Feed = () => {
-  const [selectedCategory, setSelectedCategory] = useState("New");
+  const [selectedCategory, setSelectedCategory] = useState("Home");
   const [videos, setVideos] = useState(null);
 
-  // useEffect(() => {
-  //   setVideos(null);
+  useEffect(() => {
+    setVideos(null);
 
-  //   fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
-  //     .then((data) => setVideos(data.items))
-  //   }, [selectedCategory]);
+    fetchDataFromAPI(`search?part=snippet&q=${selectedCategory}`)
+      .then((data) => setVideos(data?.items))
+    }, [selectedCategory]);
 
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
@@ -45,12 +45,12 @@ const Feed = () => {
         </Typography>
       </Box>
 
-      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+      <Box p={2} sx={{ overflowY: "auto", height: "92vh", flex: 2, backgroundColor: "#000" }}>
         <Typography
           variant="h4"
           fontWeight="bold"
           mb={2}
-          sx={{ color: "white" }}
+          sx={{ color: "white",  }}
         >
           {selectedCategory} <span style={{ color: "#FC1503" }}>videos</span>
         </Typography>
