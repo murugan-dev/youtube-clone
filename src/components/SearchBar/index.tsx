@@ -8,7 +8,7 @@ import { Search } from "@mui/icons-material";
 // styles
 import "./styles.css";
 
-const SearchBar = () => {
+const SearchBar: React.FC = () => {
   return (
     <Paper component={"form"} className="wrapper" sx={{borderRadius: "3rem"}}>
       <input type="text" placeholder="Search..." className="search-bar" />

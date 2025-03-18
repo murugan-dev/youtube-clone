@@ -12,7 +12,7 @@ const options = {
   }
 };
 
-export const fetchDataFromAPI = async (url : string) =>{
-    const data = await axios.get(`${import.meta.env.BASE_URL}/${url}`);
+export const fetchDataFromAPI = async (url : string): Promise<unknown> =>{
+    const { data }= await axios.get(`${import.meta.env.VITE_BASE_URL}/${url}`, options);
     return data;
 }

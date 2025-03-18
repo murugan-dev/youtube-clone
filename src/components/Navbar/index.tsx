@@ -10,7 +10,7 @@ import SearchBar from "../SearchBar/index.tsx";
 // Assets
 import Logo from "@/assets/Logo.png";
 
-const Navbar = () => {
+const Navbar : React.FC = ()   => {
   return (
     <Stack
       direction={"row"}

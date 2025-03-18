@@ -5,21 +5,21 @@ import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 
 // Custom components
-import { Sidebar } from "@/path/index.ts";
+import { Sidebar, Videos } from "@/path/index.ts";
 
 import { fetchDataFromAPI } from "@/utils/fetchDataFromAPI.tsx";
-import { Videos, Sidebar } from "./";
 
 const Feed = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Home");
-  const [videos, setVideos] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>("Home");
+  const [videos, setVideos] = useState<any[] | null>(null);
 
   useEffect(() => {
     setVideos(null);
 
-    fetchDataFromAPI(`search?part=snippet&q=${selectedCategory}`)
-      .then((data) => setVideos(data?.items))
-    }, [selectedCategory]);
+    fetchDataFromAPI(`search?part=snippet&q=${selectedCategory}`).then(
+      (data: { items: any[] }) => setVideos(data?.items)
+    );
+  }, [selectedCategory]);
 
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
@@ -41,21 +41,29 @@ const Feed = () => {
           variant="body2"
           sx={{ mt: 1.5, color: "#fff" }}
         >
-          Copyright @ 2025 
+          Copyright @ 2025
         </Typography>
       </Box>
 
-      <Box p={2} sx={{ overflowY: "auto", height: "92vh", flex: 2, backgroundColor: "#000" }}>
+      <Box
+        p={2}
+        sx={{
+          overflowY: "auto",
+          height: "92vh",
+          flex: 2,
+          backgroundColor: "#000",
+        }}
+      >
         <Typography
           variant="h4"
           fontWeight="bold"
           mb={2}
-          sx={{ color: "white",  }}
+          sx={{ color: "white" }}
         >
           {selectedCategory} <span style={{ color: "#FC1503" }}>videos</span>
         </Typography>
 
-        {/* <Videos videos={videos} /> */}
+        <Videos videos={videos} />
       </Box>
     </Stack>
   );

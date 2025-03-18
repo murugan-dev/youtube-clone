@@ -17,9 +17,9 @@ const Categories = ({ selectedCategory, setSelectedCategory }) => (
     overflowY: "auto",
     height: { sx: "auto", md: "95%" },
     flexDirection: { md: "column" },
-    scrollbarWidth: "none", // Hide scrollbar for Firefox
-    msOverflowStyle: "none", // Hide scrollbar for IE/Edge
-    "&::-webkit-scrollbar": { // Hide scrollbar for Chrome, Safari, and Opera
+    scrollbarWidth: "none",
+    msOverflowStyle: "none",
+    "&::-webkit-scrollbar": {
       display: "none",
     },
   }}
