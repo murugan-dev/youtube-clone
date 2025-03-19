@@ -5,6 +5,17 @@ export type MenuItem = {
   icon: React.ReactElement<SvgIconProps>;
 };
 
-export type VideosProps ={
-    videos: any[];
-}
+export type VideosProps = {
+  id: { videoId?: string, channelId?: string };
+  snippet: {
+    title: string;
+    description: string;
+    thumbnails: { high: { url: string } };
+    channelTitle: string;
+    channelId: string
+  };
+};
+
+export type VideosComponentProps = {
+  videos: VideosProps[] | null;
+};
