@@ -19,3 +19,14 @@ export type VideosProps = {
 export type VideosComponentProps = {
   videos: VideosProps[] | null;
 };
+
+type channelStatistics ={
+  viewCount: string,
+  subscriberCount: string,
+  videoCount: string
+}
+
+type channelId = {
+  id: string
+}
+export type channelFullDetails = channelStatistics & VideosProps & channelId;

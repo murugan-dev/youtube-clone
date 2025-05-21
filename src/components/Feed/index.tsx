@@ -12,19 +12,19 @@ import { Sidebar, Videos } from '@/path/index.ts';
 
 import { fetchDataFromAPI } from '@/utils/fetchDataFromAPI.tsx';
 
+
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Home');
   const [videos, setVideos] = useState<VideosProps[] | null>(null);
 
   useEffect(() => {
+    const timer = setTimeout(() => {
     setVideos(null);
-
     fetchDataFromAPI(`search?part=snippet&q=${selectedCategory}`).then(
       (data: { items: VideosProps[] }) => setVideos(data.items)
     );
+  }, 300);
   }, [selectedCategory]);
-
-  console.log(videos);
 
   return (
     <Stack sx={{ flexDirection: { sx: 'column', md: 'row' } }}>

@@ -19,10 +19,11 @@ const Videos: React.FC<VideosComponentProps> = ({ videos }) => {
     <Box sx={{display: "grid", gridTemplateColumns: {xs: "1fr",
       sm: "repeat(1, 1fr)",
       md: "repeat(2, 1fr)",
-      lg: "repeat(3, 1fr)",}, gap: 0}}>
+      lg: "repeat(3, 1fr)",
+      xl: "repeat(4, 1fr)",}, gap: 0}}>
       {videos.map((item) => (
         <Box key={item?.id?.channelId || item?.id?.videoId}>
-          {item?.id?.channelId && <ChannelCard />}
+          {item?.id?.channelId && <ChannelCard {...item}/>}
           {item?.id?.videoId && <VideoCard {...item} />}
         </Box>
       ))}

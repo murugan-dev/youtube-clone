@@ -16,7 +16,7 @@ const VideoCard = ({ id, snippet }: VideoCardProps) => {
   const { videoId = '' } = id;
 
   return (
-    <Card sx={{ width: { xs: '100%', sm: '358px', md: "320px" }, boxShadow: "none", borderRadius: 0 }}>
+    <Card sx={{ width: { xs: '100%', sm: '358px', md: "320px" }, boxShadow: "none", borderRadius: 0, marginBottom: "1rem" }}>
       <Link to={videoId && `/video/${videoId}`}>
         <CardMedia
           component="img"
